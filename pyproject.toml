@@ -110,10 +110,10 @@ package-dir = { "" = "src" }
 where = ["src"]
 
 [project.entry-points.'nomad.plugin']
-parser_entry_point = "nomad_battery_data.parsers:parser_entry_point"
-schema_package_entry_point = "nomad_battery_data.schema_packages:schema_package_entry_point"
-
-app_entry_point = "nomad_battery_data.apps:app_entry_point"
+parser_entry_point = "nomad_battery_data.parsers:battery_data_parser"
+schema_package_entry_point = "nomad_battery_data.schema_packages:battery_data_schema"
+#app_entry_point = "nomad_battery_data.apps:app_entry_point"
+battery_data_app = "nomad_battery_data.apps: battery_data_app"
 
 [tool.cruft]
 # Avoid updating workflow files, this leads to permissions issues
